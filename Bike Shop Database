@@ -1,0 +1,31 @@
+--Create A Bike Shop Database
+
+CREATE TABLE Inventory (id integer primary key, Item TEXT, Style Text, Color TEXT, Price INTEGER, Quantity Integer);
+
+Insert into Inventory Values (1, "Bike A", "Road", "Black", "500", 3);
+Insert into Inventory Values (2, "Bike B", "Road", "Blue", "500", 2);
+Insert into Inventory Values (3, "Bike C", "Road", "Red", "500", 2);
+Insert into Inventory Values (4, "Bike D", "Road", "Yellow", "500", 4);
+Insert into Inventory Values (5, "Bike E", "Road", "Green", "500", 1);
+Insert into Inventory Values (6, "Bike F", "Mountain", "Black", "750", 2);
+Insert into Inventory Values (7, "Bike G", "Mountain", "Blue", "750", 3);
+Insert into Inventory Values (8, "Bike H", "Mountain", "Red", "750", 0);
+Insert into Inventory Values (9, "Bike I", "Mountain", "Yellow", "750", 1);
+Insert into Inventory Values (10, "Bike J", "Mountain", "Green", "750", 2);
+Insert into Inventory Values (11, "Bike K", "Electric", "Black", "2300", 2);
+Insert into Inventory Values (12, "Bike L", "Electric", "Blue", "2300", 1);
+Insert into Inventory Values (13, "Bike M", "Electric", "Red", "2300", 2);
+Insert into Inventory Values (14, "Bike N", "Electric", "Yellow", "2300", 3);
+Insert into Inventory Values (15, "Bike O", "Electric", "Green", "2300", 2);
+
+--Display database in a table.
+Select * from Inventory;
+
+--Display Database in order by color.
+Select * from Inventory
+order by Color;
+
+--What is the total value for each bike in stock?
+Select Item,
+Price * Quantity AS Total_Value
+FROM Inventory;
